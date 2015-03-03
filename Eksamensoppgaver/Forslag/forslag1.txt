@@ -1,0 +1,12 @@
+Forslag til eksamensoppgave:
+
+Tegn følgende kretser med to porter:
+
+1)	X AND  	Y AND  	Z
+2)  X NAND 	Y NAND 	Z
+3)  X OR	Y OR	Z
+4)  X NOR   Y NOR   Z
+5)  X XOR	Y XOR	Z
+6)  X XNOR	Y XNOR	Z
+
+Fasit: Se vedlegg
