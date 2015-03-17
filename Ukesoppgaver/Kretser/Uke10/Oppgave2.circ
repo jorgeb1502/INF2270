@@ -2,6 +2,14 @@
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="north"/>
+    </tool>
     <tool name="Clock">
       <a name="facing" val="north"/>
     </tool>
@@ -88,28 +96,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(250,270)" to="(250,290)"/>
     <wire from="(250,360)" to="(250,380)"/>
     <wire from="(280,290)" to="(280,380)"/>
-    <comp lib="0" loc="(310,360)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Enable 2"/>
-    </comp>
-    <comp lib="1" loc="(320,250)" name="Controlled Buffer">
-      <a name="width" val="4"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(280,420)" name="Clock">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(350,250)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="Out 1"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(270,340)" name="Register">
-      <a name="width" val="4"/>
-    </comp>
     <comp lib="0" loc="(310,230)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
@@ -122,9 +108,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Out 2"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(320,340)" name="Controlled Buffer">
-      <a name="width" val="4"/>
-    </comp>
     <comp lib="4" loc="(270,250)" name="Register">
       <a name="width" val="4"/>
     </comp>
@@ -133,10 +116,35 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="Inn 1"/>
     </comp>
+    <comp lib="1" loc="(320,250)" name="Controlled Buffer">
+      <a name="width" val="4"/>
+      <a name="control" val="left"/>
+    </comp>
     <comp lib="0" loc="(190,340)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Inn 2"/>
+    </comp>
+    <comp lib="0" loc="(310,360)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Enable 2"/>
+    </comp>
+    <comp lib="0" loc="(280,420)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(270,340)" name="Register">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(350,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Out 1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(320,340)" name="Controlled Buffer">
+      <a name="width" val="4"/>
     </comp>
   </circuit>
   <circuit name="MUX">
@@ -171,14 +179,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(260,300)" to="(270,300)"/>
     <wire from="(260,310)" to="(270,310)"/>
     <wire from="(240,390)" to="(310,390)"/>
+    <comp lib="0" loc="(140,320)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Inn 2"/>
+    </comp>
     <comp lib="0" loc="(380,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(320,320)" name="Controlled Buffer">
-      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(140,290)" name="Pin">
       <a name="width" val="4"/>
@@ -188,17 +198,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(340,290)" name="Controlled Buffer">
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(140,320)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Inn 2"/>
-    </comp>
-    <comp lib="1" loc="(310,330)" name="NOT Gate">
+    <comp lib="1" loc="(240,320)" name="NOT Gate">
       <a name="facing" val="north"/>
       <a name="size" val="20"/>
     </comp>
+    <comp lib="1" loc="(320,320)" name="Controlled Buffer">
+      <a name="width" val="4"/>
+    </comp>
     <comp loc="(260,300)" name="Tristate"/>
-    <comp lib="1" loc="(240,320)" name="NOT Gate">
+    <comp lib="1" loc="(310,330)" name="NOT Gate">
       <a name="facing" val="north"/>
       <a name="size" val="20"/>
     </comp>
