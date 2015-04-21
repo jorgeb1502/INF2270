@@ -5,6 +5,7 @@
 typedef unsigned char uchar;
 
 extern int sprinter (uchar *res, uchar *format, ...);
+extern void my_ftoa (char *s, double f);
 
 
 /* check: Check the resulting string and return value: */
